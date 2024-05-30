@@ -1,0 +1,45 @@
+// Create a variable to hold your football players
+let footballTeam = [];
+
+// This function will take in some values as parameters, create a
+// player object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function addFootballPlayer(name, position, goals, assists, yellowCards, redCards) {
+    let player = {
+        name: name,
+        position: position,
+        goals: goals,
+        assists: assists,
+        yellowCards: yellowCards,
+        redCards: redCards
+    };
+    footballTeam.push(player);
+}
+
+// Create a "loop" that will go through an "array" of players
+// and print their metadata with console.log()
+function listFootballPlayers() {
+    for (let i = 0; i < footballTeam.length; i++) {
+        console.log("\n\n___ PLAYER PROFILE ___\n\n");
+        console.log("Name: " + footballTeam[i].name);
+        console.log("Position: " + footballTeam[i].position);
+        console.log("Goals: " + footballTeam[i].goals);
+        console.log("Assists: " + footballTeam[i].assists);
+        console.log("Yellow Cards: " + footballTeam[i].yellowCards);
+        console.log("Red Cards: " + footballTeam[i].redCards);
+        console.log("\n\n___ * * * * * ___\n");
+    }
+}
+
+// Print the total number of players in the team to the console
+function getTotalFootballPlayers() {
+    console.log("Total Football Players in the Team: " + footballTeam.length);
+}
+
+// Call your functions below this line
+addFootballPlayer("Lionel Messi", "Forward", 750, 300, 50, 2);
+addFootballPlayer("Cristiano Ronaldo", "Forward", 800, 200, 60, 3);
+addFootballPlayer("Kevin De Bruyne", "Midfielder", 100, 300, 30, 1);
+addFootballPlayer("Virgil van Dijk", "Defender", 30, 10, 20, 1);
+listFootballPlayers();
+getTotalFootballPlayers();
